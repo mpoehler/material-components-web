@@ -80,8 +80,7 @@ export class MDCList extends MDCComponent {
 
   /** @return Array<!Element>*/
   get listElements_() {
-    return [].slice.call(this.root_.querySelectorAll(strings.ITEMS_SELECTOR))
-      .filter((ele) => ele.parentElement === this.root_);
+    return [].slice.call(this.root_.querySelectorAll(strings.ITEMS_SELECTOR));
   }
 
   /** @param {boolean} value */
