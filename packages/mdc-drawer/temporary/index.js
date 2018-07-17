@@ -59,9 +59,9 @@ export class MDCTemporaryDrawer extends MDCComponent {
       deregisterInteractionHandler: (evt, handler) =>
         this.root_.removeEventListener(util.remapEvent(evt), handler, util.applyPassive()),
       registerDrawerInteractionHandler: (evt, handler) =>
-        this.drawer.addEventListener(util.remapEvent(evt), handler),
+        this.drawer.addEventListener(util.remapEvent(evt), handler, util.applyPassive()),
       deregisterDrawerInteractionHandler: (evt, handler) =>
-        this.drawer.removeEventListener(util.remapEvent(evt), handler),
+        this.drawer.removeEventListener(util.remapEvent(evt), handler, util.applyPassive()),
       registerTransitionEndHandler: (handler) => this.drawer.addEventListener('transitionend', handler),
       deregisterTransitionEndHandler: (handler) => this.drawer.removeEventListener('transitionend', handler),
       registerDocumentKeydownHandler: (handler) => document.addEventListener('keydown', handler),
